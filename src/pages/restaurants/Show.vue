@@ -3,7 +3,7 @@ import axios from "axios";
 export default{
     data(){
         return{
-            backendUrl : 'http://localhost:8000',
+            backendUrl : 'http://localhost:8001',
         }
     }
 }

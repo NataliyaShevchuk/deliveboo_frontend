@@ -36,14 +36,9 @@ export default {
                     } else {
                         this.submitResult = e.message;
                     }
-                    console.log(e);
+                    
                 });
         },
-        onCoverImgchange(event) {
-            const chosenFiles = event.target.files
-
-            this.form.cover_img = chosenFiles[0];
-        }
     }
 }
 </script>

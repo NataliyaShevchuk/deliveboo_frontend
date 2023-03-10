@@ -5,7 +5,7 @@ export default {
     name: "DishCheck",
     data() {
         return {
-            backendUrl: 'http://localhost:8000',
+            backendUrl: 'http://localhost:8001',
             submitResult: "",
             form: {
                 name: "",
