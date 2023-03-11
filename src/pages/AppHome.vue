@@ -5,7 +5,7 @@ export default{
     name: "AppHome", 
     data(){
         return{
-            backendUrl : 'http://localhost:8001',
+            backendUrl : 'http://localhost:8000',
         }
     }
 }
