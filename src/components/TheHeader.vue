@@ -21,21 +21,26 @@ export default {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            <!--<a class="nav-link active text-white" aria-current="page" href="#">Home</a>-->
+            <router-link to="/home" class="nav-link active text-white">Home</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Il tuo Ristorante</a>
+            <!--<a class="nav-link active text-white" aria-current="page" href="#">Il tuo Ristorante</a>-->
+            <router-link to="/restaurant.show" class="nav-link active text-white">Il tuo Ristorante</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">I tuoi piatti</a>
+            <!--<a class="nav-link active text-white" aria-current="page" href="#">I tuoi piatti</a>-->
+            <router-link to="/dishes.index" class="nav-link active text-white">I tuoi piatti</router-link>
           </li>
           <li class="nav-item dropdown text-white navbar-nav mr-auto">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenutə, (Nome Utente)
             </a>
             <ul class="dropdown-menu" style="background-color: #ef5117ff;">
-              <li><a class="dropdown-item text-white" href="#">Dashboard</a></li>
-              <li><a class="dropdown-item text-white" href="#">Il tuo profilo</a></li>
+              <!--<li><a class="dropdown-item text-white" href="#">Dashboard</a></li>-->
+              <li><router-link to="/dashboard" class="nav-link active text-white">Dashboard</router-link></li>
+              <!--<li><a class="dropdown-item text-white" href="#">Il tuo profilo</a></li>-->
+              <li><router-link to="/user.show" class="nav-link active text-white">Il tuo profilo</router-link></li>
               <li>
                 <hr class="dropdown-divider" />
               </li>
