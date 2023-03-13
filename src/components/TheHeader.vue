@@ -1,7 +1,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      
+    };
   },
 };
 </script>
@@ -9,7 +11,9 @@ export default {
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm d_flex" style="background-color: #ef5117ff;">
     <div class="container-fluid d-flex">
-      <a class="navbar-brand d-flex align-items-center" href="#">(Logo)</a>
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="/logo/4.png" alt="" class="logo">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

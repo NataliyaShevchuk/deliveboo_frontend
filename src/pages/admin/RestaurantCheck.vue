@@ -26,7 +26,7 @@ export default {
             formData.append('address', this.form.address);
 
             axios
-            .post(this.backendUrl + '/api/restaurant-check', formData)
+            .post(this.backendUrl + '/api/restaurants', formData)
                 .then((resp) => {
                     this.submitResult = "success";
                 })

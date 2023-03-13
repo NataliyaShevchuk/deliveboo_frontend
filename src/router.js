@@ -7,6 +7,7 @@ import Show from './pages/restaurants/Show.vue';
 import DishCheck from './pages/admin/DishCheck.vue';
 import RestaurantCheck from './pages/admin/RestaurantCheck.vue';
 import UserRegistration from './pages/admin/UserRegistration.vue';
+import Dishes from './components/Dishes.vue';
 
 
 const router = createRouter({
@@ -23,23 +24,28 @@ name: 'restaurants.index',
 component: Index
 },
 {
-    path: '/restaurant/:id',
+    path: '/restaurants/restaurant',
     name: 'restaurant.show',
     component: Show
 },
 {
-    path: '/dish-check',
-    name: 'dish-check',
+    path: '/dishes',
+    name: 'dishes.index',
+    component: Dishes
+},
+{
+    path: '/dishes',
+    name: 'dishes',
     component: DishCheck
 },
 {
-    path: '/restaurant-check',
-    name: 'restaurant-check',
+    path: '/restaurants',
+    name: 'restaurants',
     component: RestaurantCheck
 },
 {
-    path: '/user-registration',
-    name: 'user-registration',
+    path: '/register',
+    name: 'register',
     component: UserRegistration
 },
 ]
