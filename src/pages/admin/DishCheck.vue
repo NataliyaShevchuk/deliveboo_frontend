@@ -12,8 +12,8 @@ export default {
                 cover_img: "",
                 ingredients: "",
                 description: "",
-                price: "",
-                hide: "",
+                price: ""
+                // hide: false,
             }
         };
     },
@@ -25,17 +25,12 @@ export default {
             formData.append('ingredients', this.form.ingredients);
             formData.append('description', this.form.description);
             formData.append('price', this.form.price);
-            formData.append('hide', this.form.hide);
+            // formData.append('hide', this.form.hide);
 
-            axios
-                .post(this.backendUrl + '/api/dish-check', formData)
+            axios.post(this.backendUrl + '/api/dishes', formData)
                 .then((resp) => {
                     this.submitResult = "success";
-                    if(this.formData.hide === "checked"){
-                        return true;
-                    }else{
-                        return false;
-                    }
+                    
                 })
                 .catch((e) => {
                     if (e.response && e.response.data) {
@@ -91,7 +86,7 @@ export default {
                     class="form-control"
                     name="description"
                     v-model="form.description">
-                        </textarea>
+                </textarea>
             </div>
 
             <div class="mb-3">
@@ -100,7 +95,7 @@ export default {
                     class="form-control"
                     name="ingredients"
                     v-model="form.ingredients">
-                        </textarea>
+                </textarea>
             </div>
 
             <div class="mb-3">
@@ -112,11 +107,11 @@ export default {
             </div>
 
 
-            <div class="form-check form-switch">
+            <!-- <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" 
                 v-model="form.hide">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Nascondere la vista del piatto</label>
-            </div>
+            </div> -->
 
             <button class="btn btn-success text-white" type="submit">Save</button>
             <button class="btn btn-warning m-3" type="reset">

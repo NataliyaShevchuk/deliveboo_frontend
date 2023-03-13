@@ -1,5 +1,5 @@
 <script>
-import axios from "axios";
+import axios from 'axios';
 
 export default {
     name: "UserRegistration",
@@ -12,8 +12,8 @@ export default {
                 surname: "",
                 email: "",
                 password: "",
-                confirm_password: "",
-            }
+                // confirm_password: "",
+            },
         };
     },
     methods: {
@@ -23,10 +23,10 @@ export default {
             formData.append('surname', this.form.surname);
             formData.append('email', this.form.email);
             formData.append('password', this.form.password);
-            formData.append('confirm_password', this.form.confirm_password);
+            // formData.append('confirm_password', this.form.confirm_password);
 
             axios
-                .post(this.backendUrl + '/api/user-registration', formData)
+                .post(this.backendUrl + '/api/register', formData)
                 .then((resp) => {
                     this.submitResult = "success";
                 })
@@ -36,7 +36,7 @@ export default {
                     } else {
                         this.submitResult = e.message;
                     }
-                    
+
                 });
         },
     }
@@ -45,6 +45,11 @@ export default {
 
 
 <template>
+    <header>
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+    </header>
+
     <div class="container justify-content-center">
 
         <div class="alert alert-success" role="alert" v-if="submitResult === 'success'">
@@ -98,14 +103,14 @@ export default {
                                     <label for="email" class="col-md-4 col-form-label text-md-right">
                                         Email
                                     </label>
-                                        <div class="col-md-6 text-right">
+                                    <div class="col-md-6 text-right">
 
-                                            <input id="email" type="email"
-                                                class="form-control" name="email"
-                                                required autocomplete="email"
-                                                v-model="form.email">
+                                        <input id="email" type="email"
+                                            class="form-control" name="email"
+                                            required autocomplete="email"
+                                            v-model="form.email">
 
-                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="mb-4 row">
@@ -130,8 +135,8 @@ export default {
 
                                     <div class="col-md-6">
                                         <input id="password-confirm" type="password" class="form-control"
-                                            name="password_confirmation" required autocomplete="new-password"
-                                            v-model="form.confirm_password">
+                                            name="password" required autocomplete="new-password"
+                                            v-model="form.password">
                                     </div>
                                 </div>
 
