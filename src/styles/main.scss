@@ -3,6 +3,19 @@
 
 .logo{
     display: block;
-    width:200px;
-    height: 100px;
+    width: 120px;
+    height: 60px;
+}
+
+.jumbotron {
+    background-image: url(/public/logo/ristorante-jumbotron.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 100%;
+    color: white;
+    background-size: cover;
+}
+
+.footer {
+    background-color: rgb(56, 55, 55);
 }

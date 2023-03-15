@@ -2,9 +2,14 @@
 import axios from "axios";
 import { store } from "./store";
 import TheHeader from './components/TheHeader.vue';
+import TheMain from "./components/TheMain.vue";
+import TheHomeTypes from "./components/TheHomeTypes.vue";
+import TheFooter from "./components/TheFooter.vue";
+//import About from "./pages/About.vue";
+
 // import {routerView} from "vue-router";
 export default {
-  components: { TheHeader },
+components: { TheHeader , TheMain , TheHomeTypes , TheFooter , },
   data() {
     return {
       store,
@@ -17,6 +22,10 @@ export default {
 <template>
   <div>
     <TheHeader></TheHeader>
+    <TheMain></TheMain>
+    <TheHomeTypes></TheHomeTypes>
+    <!--<About></About>-->
+    <TheFooter></TheFooter>
     <router-view></router-view>
   </div>
 </template>
