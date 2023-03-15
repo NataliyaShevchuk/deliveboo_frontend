@@ -9,6 +9,7 @@ import RestaurantCheck from './pages/admin/RestaurantCheck.vue';
 import UserRegistration from './pages/admin/UserRegistration.vue';
 import Dishes from './components/Dishes.vue';
 import ContactUs from './pages/ContactUs.vue';
+import TheHomeTypes from './components/TheHomeTypes.vue';
 
 const router = createRouter({
 history: createWebHistory(),
@@ -34,19 +35,9 @@ component: Index
     component: Dishes
 },
 {
-    path: '/dishes',
-    name: 'dishes',
-    component: DishCheck
-},
-{
-    path: '/restaurants',
-    name: 'restaurants',
-    component: RestaurantCheck
-},
-{
-    path: '/register',
-    name: 'register',
-    component: UserRegistration
+    path: '/types',
+    name: 'types',
+    component: TheHomeTypes
 },
 {
     path: '/',
