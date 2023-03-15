@@ -26,11 +26,11 @@ export default {
       <h3>Scegli quello che ti piace di più...</h3>
     </div>
     <div class="row row-cols-1 row-cols-md-2 g-4">
-      <div class="col" v-for="type in types" :key="type.id">
+      <div class="col" v-for="[type, index] in types" :key="types.id">
         <div class="card">
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">{{ types.name }}</h5>
+            <h5 class="card-title">{{ type.name }}</h5>
             <p class="card-text">Breve introduzione sul tipo di cucina</p>
           </div>
         </div>
