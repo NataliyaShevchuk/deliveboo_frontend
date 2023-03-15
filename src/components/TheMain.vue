@@ -8,11 +8,11 @@ export default {
 };
 </script>
 <template>
-    <section class="jumbotron ratio ratio-4x3 text-center">
-        <div class="container-fluid">
+    <section class="">
+        <div class="container-fluid jumbotron">
             <div class="row">
-                <div class="d-flex align-items-center justify-content-center">
-                    <h3 class="">Accomodati, ci pensa Deliveboo!</h3>
+                <div class="d-flex align-items-center justify-content-center accomodati">
+                    <h2 class="text-white fw-bold">Accomodati, ci pensa Deliveboo!</h2>
                 </div>
             </div>
         </div>
