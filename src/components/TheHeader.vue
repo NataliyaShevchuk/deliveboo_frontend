@@ -9,11 +9,12 @@ export default {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm d_flex" style="background-color: #ef5117ff;">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm d_flex introduction sticky-top" style="background-color: #ef5117ff;">
     <div class="container-fluid d-flex">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <!--<a class="navbar-brand d-flex align-items-center" href="#">
         <img src="/logo/4.png" alt="" class="logo">
-      </a>
+      </a>-->
+      <router-link to="/home" class="navbar-brand d-flex align-items-center"><img src="/logo/4.png" alt="" class="logo"></router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,6 +33,11 @@ export default {
             <!--<a class="nav-link active text-white" aria-current="page" href="#">I tuoi piatti</a>-->
             <router-link to="/dishes.index" class="nav-link active text-white">I tuoi piatti</router-link>
           </li>
+          <!-- Sezione contattaci -->
+          <li class="nav-item">
+            <!--<a class="nav-link active text-white" aria-current="page" href="#">I tuoi piatti</a>-->
+            <router-link to="/ContactUs" class="nav-link active text-white">Contattaci!</router-link>
+          </li>
           <li class="nav-item dropdown text-white navbar-nav mr-auto">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenutə, (Nome Utente)
@@ -45,7 +51,8 @@ export default {
                 <hr class="dropdown-divider" />
               </li>
               <li>
-                <a class="dropdown-item text-white" href="#">Logout</a>
+                <!--<a class="dropdown-item text-white" href="#">Logout</a>-->
+                <router-link to="/userLogin" class="nav-link active text-white">Logout</router-link>
               </li>
             </ul>
           </li>

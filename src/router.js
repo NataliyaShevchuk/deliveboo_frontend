@@ -8,7 +8,7 @@ import DishCheck from './pages/admin/DishCheck.vue';
 import RestaurantCheck from './pages/admin/RestaurantCheck.vue';
 import UserRegistration from './pages/admin/UserRegistration.vue';
 import Dishes from './components/Dishes.vue';
-
+import ContactUs from './pages/ContactUs.vue';
 
 const router = createRouter({
 history: createWebHistory(),
@@ -47,6 +47,11 @@ component: Index
     path: '/register',
     name: 'register',
     component: UserRegistration
+},
+{
+    path: '/',
+    name: 'ContactUs',
+    component: ContactUs
 },
 ]
 });
