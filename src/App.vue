@@ -5,11 +5,12 @@ import TheHeader from './components/TheHeader.vue';
 import TheMain from "./components/TheMain.vue";
 import TheHomeTypes from "./components/TheHomeTypes.vue";
 import TheFooter from "./components/TheFooter.vue";
+import TheAboutUs from "./components/TheAboutUs.vue";
 //import About from "./pages/About.vue";
 
 // import {routerView} from "vue-router";
 export default {
-components: { TheHeader , TheMain , TheHomeTypes , TheFooter , },
+components: { TheHeader , TheMain , TheHomeTypes , TheFooter , TheAboutUs},
   data() {
     return {
       store,
@@ -24,7 +25,7 @@ components: { TheHeader , TheMain , TheHomeTypes , TheFooter , },
     <TheHeader></TheHeader>
     <TheMain></TheMain>
     <TheHomeTypes></TheHomeTypes>
-    <!--<About></About>-->
+    <TheAboutUs></TheAboutUs>
     <TheFooter></TheFooter>
     <router-view></router-view>
   </div>
