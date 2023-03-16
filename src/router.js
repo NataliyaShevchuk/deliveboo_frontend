@@ -4,9 +4,9 @@ import { createRouter, createWebHistory } from 'vue-router';
 import AppHome from './pages/AppHome.vue';
 import Index from './pages/restaurants/Index.vue';
 import Show from './pages/restaurants/Show.vue';
-import DishCheck from './pages/admin/DishCheck.vue';
-import RestaurantCheck from './pages/admin/RestaurantCheck.vue';
-import UserRegistration from './pages/admin/UserRegistration.vue';
+// import DishCheck from './pages/admin/DishCheck.vue';
+// import RestaurantCheck from './pages/admin/RestaurantCheck.vue';
+// import UserRegistration from './pages/admin/UserRegistration.vue';
 import Dishes from './components/Dishes.vue';
 import ContactUs from './pages/ContactUs.vue';
 import Types from './pages/restaurants/Types.vue';
@@ -37,7 +37,7 @@ routes:
         },
         {
             path: '/dishes',
-            name: 'dishes.index',
+            name: 'Dishes',
             component: Dishes
         },
         {
