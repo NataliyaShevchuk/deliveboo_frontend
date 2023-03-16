@@ -26,7 +26,7 @@ export default{
             <router-link :to='{ name: "register" }' class="text-decoration-none text-white">Registrati</router-link>
         </button>
         <button class="btn btn-primary m-3 ">
-            <router-link :to='{ name: "restaurants.index" }' class="text-decoration-none text-white">All Restaurants</router-link>
+            <router-link :to='{ name: "Restaurants" }' class="text-decoration-none text-white">All Restaurants</router-link>
         </button>
         <button class="btn btn-primary m-3 ">
             <router-link :to='{ name: "dishes.index" }' class="text-decoration-none text-white">All Dishes</router-link>
