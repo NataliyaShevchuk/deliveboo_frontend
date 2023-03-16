@@ -3,7 +3,7 @@ import axios from "axios";
 import { store } from "./store";
 import TheHeader from './components/TheHeader.vue';
 import TheMain from "./components/TheMain.vue";
-import TheHomeTypes from "./components/TheHomeTypes.vue";
+import TheHomeTypes from "./pages/restaurants/Types.vue";
 import TheFooter from "./components/TheFooter.vue";
 import Categories from "./components/Categories.vue";
 import AppHome from "./pages/AppHome.vue";
@@ -25,7 +25,7 @@ components: { TheHeader , TheMain , TheHomeTypes , TheFooter, Categories  },
   <div>
     <TheHeader></TheHeader>
     <!-- <TheMain></TheMain> -->
-    <Categories></Categories>
+    <!-- <Categories></Categories> -->
     <!--<About></About>-->
     <!-- <TheFooter></TheFooter> -->
     <router-view></router-view>
