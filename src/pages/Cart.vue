@@ -1,13 +1,12 @@
 <script>
 import axios from "axios";
 
-
-
 export default {
   name: "Cart",
   data() {
     return {
       backendUrl: 'http://localhost:8000',
+      // neworder: [],
       dishes: [],
       dishesList: []
     }
@@ -35,15 +34,19 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="container mt-3">
     <h2>Carrello</h2>
     <ul>
       <li v-for="(dish, index) in dishes" :key="index">
         {{ dish.name }} - {{ dish.price }}
         <button @click="removeDishToCart(index)">Rimuovi</button>
       </li>
+      <!-- <li v-for="(dish, index) in dishes" :key="index">
+        {{ dish.name }} - {{ dish.price }}
+        <button @click="removeDishToCart(index)">Rimuovi</button>
+      </li> -->
     </ul>
-    <h2>Prodotti disponibili</h2>
+    <h2 class="mt-2">Prodotti disponibili</h2>
     <ul>
       <li v-for="(dish, index) in dishesList" :key="index">
         {{ dish.name }} - {{ dish.price }} <button @click=" addDishToCart(dish)">Aggiungi al carrello</button>
@@ -53,6 +56,6 @@ export default {
 
 </template>
 
+<style>
 
-
-<style></style>
+</style>
