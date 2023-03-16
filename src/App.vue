@@ -23,7 +23,7 @@ components: { TheHeader , TheMain , TheHomeTypes , TheFooter, Categories  },
 
 <template>
   <div>
-    <TheHeader></TheHeader>
+    <!-- <TheHeader></TheHeader> -->
     <!-- <TheMain></TheMain> -->
     <!-- <Categories></Categories> -->
     <!--<About></About>-->

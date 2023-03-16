@@ -6,7 +6,7 @@ export default{
   data(){
     return{
       backendUrl: "http://localhost:8000",
-      types: {},
+      types: [],
     };
   },
   methods: {
@@ -14,7 +14,7 @@ export default{
       axios.get(this.backendUrl + "/api/types")
       .then((resp) => {
         this.types = resp.data;
-        
+        console.log(this.types);
       });
     },
   },
@@ -32,10 +32,10 @@ export default{
     </div>
 
     <div class="row  g-4">
-      <div class="col" v-for="(type, key, index) in types" :key="type">
+      <div class="col" v-for="[type, index] in types" :key="type.id">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title text-center">{{ key.name }}</h5>
+            <h5 class="card-title text-center">{{ index.name }}</h5>
           </div>
         </div>
       </div>
