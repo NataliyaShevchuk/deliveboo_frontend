@@ -4,6 +4,7 @@ import axios from "axios";
 
 
 export default {
+  name:"RestaurantIndex",
   data() {
     return {
     backendUrl : 'http://localhost:8000',
@@ -28,6 +29,7 @@ export default {
 
 <template>
   <div>
+    <h1> sezione ristoranti</h1>
     <div class="row justify-content-evenly m-4">
       <div class="col-6" v-for="restaurant in restaurants" :key="restaurants.id">
         <div class="card mb-3" style="max-width: 540px;">

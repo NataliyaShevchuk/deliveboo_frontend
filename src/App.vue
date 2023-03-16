@@ -23,11 +23,13 @@ components: { TheHeader , TheMain , TheHomeTypes , TheFooter , TheAboutUs},
 <template>
   <div>
     <TheHeader></TheHeader>
-    <TheMain></TheMain>
-    <TheHomeTypes></TheHomeTypes>
-    <TheAboutUs></TheAboutUs>
-    <TheFooter></TheFooter>
     <router-view></router-view>
+    <!-- <TheMain></TheMain>
+ 
+    <TheHomeTypes></TheHomeTypes>
+    <TheAboutUs></TheAboutUs> -->
+    <TheFooter></TheFooter>
+ 
   </div>
 </template>
 

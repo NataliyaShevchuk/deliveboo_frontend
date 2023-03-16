@@ -11,7 +11,7 @@ export default{
 }
 </script>
 <template>
-    <div>
-        Sezione Contattaci
+    <div class="bg-warning">
+        Sezione Contattacisds
     </div>
 </template>
