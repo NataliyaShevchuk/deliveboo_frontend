@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 export default {
-    name: "DishesIndex",
+    name: "Dishes",
     data() {
     return {
     backendUrl : 'http://localhost:8000',

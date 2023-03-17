@@ -22,15 +22,12 @@ components: { TheHeader , TheMain , TheFooter, Categories  },
 
 <template>
   <div>
-    <!-- <TheHeader></TheHeader> -->
-    <!-- <TheMain></TheMain> -->
-    <!-- <Categories></Categories> -->
+    <TheHeader></TheHeader>
     <!--<About></About>-->
     <!-- <TheFooter></TheFooter> -->
     <router-view></router-view>
     <!-- <TheMain></TheMain>
   
-    <TheHomeTypes></TheHomeTypes>
     <TheAboutUs></TheAboutUs> -->
     <TheFooter></TheFooter>
     

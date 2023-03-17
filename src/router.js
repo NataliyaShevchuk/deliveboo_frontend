@@ -45,6 +45,12 @@ routes:
             name: 'ContactUs',
             component: ContactUs
         },
+        {
+            path: '/cart',
+            name: 'Cart',
+            component: Cart
+        },
+
     ]
 });
 export { router };

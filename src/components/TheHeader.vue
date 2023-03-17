@@ -11,11 +11,11 @@ export default {
         },
         {
           label: "Ristoranti",
-          routeName: "restaurants.index",
+          routeName: "Restaurants",
         },
         {
           label: "Piatti",
-          routeName: "dishes.index",
+          routeName: "Dishes",
         },
         {
           label: "Contatti",
@@ -34,7 +34,7 @@ export default {
       <a class="navbar-brand d-flex align-items-center" href="#">
         <img src="/logo/4.png" alt="" class="logo">
       </a>
-      <router-link :to="{name: AppHome}" class="navbar-brand d-flex align-items-center"><img src="/logo/4.png" alt="" class="logo"></router-link>
+      <!-- <router-link :to="{name: AppHome}" class="navbar-brand d-flex align-items-center">Homepage</router-link> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,11 +43,11 @@ export default {
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <!--<a class="nav-link active text-white" aria-current="page" href="#">Home</a>-->
-            <router-link :to="{name: App}" class="nav-link active text-white">Home</router-link>
+            <router-link :to="{name: AppHome}" class="nav-link active text-white">Home</router-link>
           </li>
           <li class="nav-item">
             <!--<a class="nav-link active text-white" aria-current="page" href="#">Il tuo Ristorante</a>-->
-            <router-link :to="{name: Restaurants, params: restaurant.Restaurants}" class="nav-link active text-white">Il tuo Ristorante</router-link>
+            <router-link :to="{name: Restaurants}" class="nav-link active text-white">Ristoranti</router-link>
           </li>
           <li class="nav-item">
             <!--<a class="nav-link active text-white" aria-current="page" href="#">I tuoi piatti</a>-->
@@ -56,17 +56,17 @@ export default {
           <!-- Sezione contattaci -->
           <li class="nav-item">
             <!--<a class="nav-link active text-white" aria-current="page" href="#">I tuoi piatti</a>-->
-            <router-link :to="{name: ContactUs}" class="nav-link active text-white">Contattaci!</router-link>
+            <!-- <router-link :to="{name: ContactUs}" class="nav-link active text-white">Contattaci!</router-link>
           </li>
           <li class="nav-item dropdown text-white navbar-nav mr-auto">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenutə, (Nome Utente)
-            </a>
+            </a> -->
             <ul class="dropdown-menu" style="background-color: #ef5117ff;">
               <!--<li><a class="dropdown-item text-white" href="#">Dashboard</a></li>-->
               <li><router-link :to="{name: dashboard}" class="nav-link active text-white">Dashboard</router-link></li>
               <!--<li><a class="dropdown-item text-white" href="#">Il tuo profilo</a></li>-->
-              <li><router-link :to="{name: user.show}" class="nav-link active text-white">Il tuo profilo</router-link></li>
+              <li><router-link :to="{}" class="nav-link active text-white">Il tuo profilo</router-link></li>
               <li>
                 <hr class="dropdown-divider" />
               </li>
@@ -105,7 +105,7 @@ export default {
             </ul>
           </div>
           <div>
-            <router-link to="/cart" class="nav-link  text-white" style="">
+            <router-link :to="{name: Cart}" class="nav-link  text-white" style="">
               <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
             </router-link>
           </div>
