@@ -12,7 +12,7 @@ export default {
         <div class="container-fluid jumbotron">
             <div class="row">
                 <div class="d-flex align-items-center justify-content-center">
-                    <h3 class="text-center">Accomodati, ci pensa Deliveboo!</h3>
+                    <h3 class="text-center text-white fw-bolder">Accomodati, ci pensa Deliveboo!</h3>
                 </div>
             </div>
         </div>

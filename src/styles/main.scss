@@ -25,6 +25,8 @@
 
 .footer {
     background-color: rgb(56, 55, 55);
+    margin-bottom: -1rem;
+    margin-top: 2rem;
 }
 
 .jumbotron-2 {
@@ -37,3 +39,14 @@
     color: white;
     background-size: cover;
 }
+
+.zoom {
+    transition: transform .2s;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(0.9);
+  }

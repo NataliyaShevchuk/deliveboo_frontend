@@ -3,11 +3,11 @@ import axios from "axios";
 
 
 export default {
-    name: "Dishes",
-    data() {
+  name: "Dishes",
+  data() {
     return {
-    backendUrl : 'http://localhost:8000',
-    dishes: [],
+      backendUrl: 'http://localhost:8000',
+      dishes: [],
     }
   },
   methods: {
@@ -20,7 +20,7 @@ export default {
         });
     }
   },
-  mounted(){
+  mounted() {
     this.fetchDishes();
   }
 }
@@ -34,14 +34,14 @@ export default {
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4" v-if="dish.cover_img">
-              <img :src="this.backendUrl + '/storage/' + dish.cover_img" class="img-fluid rounded-start h-100" alt="...">
+              <img :src="this.backendUrl + '/storage/' + dish.cover_img" class="img-fluid rounded h-100" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">{{ dish.name }}</h5>
-                <p class="card-text">{{ dish.description }}</p>
-                <p class="card-text">{{ dish.ingredients }}</p>
-                <p class="card-text">{{ dish.price }}&#8364;</p>
+                <h5 class="card-title font-seizer">{{ dish.name }}</h5>
+                <p class="card-text font-seizer">{{ dish.description }}</p>
+                <p class="card-tex font-seizer">{{ dish.ingredients }}</p>
+                <p class="card-text font-seizer">{{ dish.price }}&#8364;</p>
               </div>
             </div>
           </div>
@@ -52,5 +52,13 @@ export default {
 </template>
 
 <style>
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+.font-seizer {
+  font-size: medium;
+}
 </style>
