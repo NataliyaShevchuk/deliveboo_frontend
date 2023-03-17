@@ -18,13 +18,13 @@ export default {
 </script>
 
 <template>
-    <div class="container m-5">
+    <div class="container">
         <div class="text-center p-5">
             <h3>Scegli quello che ti piace di più...</h3>
         </div>
         <div class="row row-cols-1 row-cols-md-2 g-4 ">
             <div class="col">
-                <div class="card pizzeria">
+                <div class="card pizzeria zoom">
                     <div class="card-title">
                         <h5 class="text-center">
                             <a href="">{{ categories[0].tipo }}</a>
@@ -33,7 +33,7 @@ export default {
                 </div>
             </div>
             <div class="col">
-                <div class="card cinese">
+                <div class="card cinese zoom">
                     <div class="card-title">
                         <h5 class="text-center">
                             <a href="">{{ categories[1].tipo }}</a>
@@ -42,7 +42,7 @@ export default {
                 </div>
             </div>
             <div class="col">
-                <div class="card giapponese">
+                <div class="card giapponese zoom">
                     <div class="card-title ">
                         <h5 class="text-center">
                             <a href="">{{ categories[2].tipo }}</a>
@@ -51,7 +51,7 @@ export default {
                 </div>
             </div>
             <div class="col">
-                <div class="card kebab">
+                <div class="card kebab zoom">
                     <div class="card-title">
                         <h5 class=" text-center">
                             <a href="">{{ categories[3].tipo }}</a>
@@ -60,7 +60,7 @@ export default {
                 </div>
             </div>
             <div class="col">
-                <div class="card bisteccheria">
+                <div class="card bisteccheria zoom">
                     <div class="card-title ">
                         <h5 class="text-center">
                             <a href="">{{ categories[4].tipo }}</a>
@@ -69,7 +69,7 @@ export default {
                 </div>
             </div>
             <div class="col">
-                <div class="card americano">
+                <div class="card americano zoom">
                     <div class="card-title">
                         <h5 class="text-center">
                             <a href="">{{ categories[5].tipo }}</a>
@@ -141,8 +141,14 @@ export default {
 a{
     text-decoration: none;
     color: white;
+
 }
 
+a:hover{
+    text-decoration: none;
+    color: white;
+    
+}
 .card{
     border: 0;
     box-shadow: none;

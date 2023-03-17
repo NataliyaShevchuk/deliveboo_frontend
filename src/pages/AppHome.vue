@@ -18,7 +18,6 @@ export default{
 
 
 <template>
-    <h1>Homepage</h1>
     
     <TheMain></TheMain>
     <Categories></Categories>
