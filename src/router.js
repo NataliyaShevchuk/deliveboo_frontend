@@ -10,6 +10,7 @@ import Show from './pages/restaurants/Show.vue';
 import Dishes from './components/Dishes.vue';
 import ContactUs from './pages/ContactUs.vue';
 import Types from './pages/restaurants/Types.vue';
+import Cart from './pages/Cart.vue';
 
 const router = createRouter({
 history: createWebHistory(),
