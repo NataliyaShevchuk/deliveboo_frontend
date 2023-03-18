@@ -124,7 +124,7 @@ export default {
     </div>
     <div class="">
       <div class="container bg-container">
-        <div class="row gap-4">
+        <div class="gap-4">
           <div class="list-group-item" v-for="type in types">
           
             <label class="d-flex">
@@ -140,19 +140,19 @@ export default {
     </div>
 
     <h1 v-if="filterType.length != 0" class="mb-5">Scegli il Ristorante:</h1>
-    <div class="">
+    <div class="container-fluid d-flex justify-content-center">
       <div class="row g-4">
-        <div class="col-4 m-3" v-for="restaurant in filteredRestaurants" :key="restaurant.id">
+        <div class="col-5 m-3" v-for="restaurant in filteredRestaurants" :key="restaurant.id">
           <div class="card h-100" style="">
             <img v-if="restaurant.cover_img" class="card-img-top"
-              src="http://127.0.0.1:8000/ + '/storage/' + restaurant.cover_img)" alt=""/>
+              :src="this.backendUrl+ '/storage/' + restaurant.cover_img" alt=""/>
             <div class="card-body">
               <h5 class="card-title">{{ restaurant.name }}</h5>
               <h6 class="mt-5">Categorie:</h6>
               <div class="card-title" v-for="type_id in restaurant.types" :key="type_id.id">{{ type_id.name }}</div>
               <h6 class="mt-5">Indirizzo:</h6>
               <p class="card-text">{{ restaurant.address }}</p>
-              <a :href="'/dish/' + restaurant.id" class="btn btn-light mt-4">Menù</a>
+              <a :href="'/dishes/' + restaurant.id" class="btn btn-light mt-4">Menù</a>
             </div>
           </div>
         </div>
