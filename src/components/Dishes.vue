@@ -30,13 +30,13 @@ export default {
   <div class="mx-5">
     <h1 class="mt-2"> Sezione piatti</h1>
     <div class="row justify-content-evenly m-4">
-      <div class="col-6" v-for="dish in dishes" :key="dish.id">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4" v-if="dish.cover_img">
-              <img :src="this.backendUrl + '/storage/' + dish.cover_img" class="img-fluid rounded h-100" alt="...">
+      <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12" v-for="dish in dishes" :key="dish.id">
+        <div class="card dish-card mb-3">
+          <div class="row g-0 d-flex justify-content-center">
+            <div class="col-6" v-if="dish.cover_img">
+                <img :src="this.backendUrl + '/storage/' + dish.cover_img" class="img-fluid rounded d-block w-100" alt="...">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-12">
               <div class="card-body">
                 <h5 class="card-title font-seizer">{{ dish.name }}</h5>
                 <p class="card-text font-seizer">{{ dish.description }}</p>
@@ -52,13 +52,13 @@ export default {
 </template>
 
 <style>
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .font-seizer {
   font-size: medium;
 }
+
+
+
+
+
 </style>
