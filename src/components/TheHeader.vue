@@ -3,6 +3,7 @@ export default {
 
   data() {
     return {
+      
       menuItems: [
         {
           label: "Home",
@@ -20,6 +21,7 @@ export default {
           label: "Contatti",
           routeName: "ContactUs",
         },
+
 
       ],
     };
@@ -56,38 +58,38 @@ export default {
 
 
         <ul>
-          <li class="nav-item dropdown text-white navbar-nav ">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-                              Benvenutə, (Nome Utente)
-                            </a>
-                            <ul class="dropdown-menu" style="background-color: #ef5117ff;">
+            <li class="nav-item dropdown text-white navbar-nav ">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                                  Benvenutə, (Nome Utente)
+                                </a>
+                                <ul class="dropdown-menu" style="background-color: #ef5117ff;">
              
-                              <li><router-link to="/dashboard" class="nav-link active text-white">Dashboard</router-link></li>
+                                  <li><router-link to="/dashboard" class="nav-link active text-white">Dashboard</router-link></li>
               
-                              <li><router-link to="/user.show" class="nav-link active text-white">Il tuo profilo</router-link></li>
-                              <li>
-                                <hr class="dropdown-divider" />
-                              </li>
-                              <li>
+                                  <li><router-link to="/user.show" class="nav-link active text-white">Il tuo profilo</router-link></li>
+                                  <li>
+                                    <hr class="dropdown-divider" />
+                                  </li>
+                                  <li>
             
-                                <router-link to="/userLogin" class="nav-link active text-white">Logout</router-link>
+                                    <router-link to="/userLogin" class="nav-link active text-white">Logout</router-link>
+                                  </li>
+
+                                </ul>
                               </li>
-
                             </ul>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="right-side ">
-                        <ul>
-                          <li><router-link to="/cart" class="nav-link active text-white" style=""><i
-                                class="fa-solid fa-cart-shopping"></i></router-link></li>
-                        </ul>
-                      </div>
-                    </div>
+                          </div>
+                          <div class="right-side ">
+                            <ul>
+                              <li><router-link to="/cart" class="nav-link active text-white" style=""><i
+                                    class="fa-solid fa-cart-shopping"></i></router-link></li>
+                            </ul>
+                          </div>
+                        </div>
 
 
-                  </nav> -->
+                      </nav> -->
 
 
   <nav class="navbar navbar-expand-lg  bg-body-tertiary d_flex introduction sticky-top px-2 col-sm-12"
@@ -103,43 +105,28 @@ export default {
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item animation" v-for="(item, index) in menuItems" :key="index">
 
-
             <router-link :to="{ name: item.routeName }" class="nav-link nav-i text-white  ">
               {{ item.label }}
             </router-link>
           </li>
 
-
-
         </ul>
         <div class="d-flex">
-
           <div class="me-4">
             <ul class="list-unstyled">
-              <li class="nav-item dropdown animation">
-                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Benvenutə, (Nome Utente)
-                </a>
-                <ul class="dropdown-menu p-3" style="background-color: #ff7644;">
-                  <li><router-link to="/dashboard" class="nav-link active text-white px-1 animation">Dashboard</router-link></li>
-
-                  <li><router-link to="/user.show" class="nav-link active text-white px-1 p-1 animation">Il tuo profilo</router-link></li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-
-                    <router-link to="/userLogin" class="nav-link active text-white px-1 animation">Logout</router-link>
-                  </li>
-                </ul>
+              <li class="nav-item animation">
+                
+                  <a class="nav-link text-white" href="http://localhost:8000/login" role="button">
+                    Accedi
+                  </a>
+                
               </li>
             </ul>
           </div>
           <div>
-            <router-link :to="{ name: Cart }" class="nav-link  text-white animation" style="">
-              <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
-            </router-link>
+            
+              <a class="nav-item text-white animation" href="http://localhost:8000/register" role="button">Registrati</a>
+           
           </div>
         </div>
       </div>
@@ -178,7 +165,7 @@ export default {
   width: 50%;
 }
 
-.logo{
+.logo {
   object-fit: contain;
 }
 </style>
