@@ -20,8 +20,9 @@ components: { TheHeader , TheMain , TheFooter },
 </script>
 
 <template>
-  <div>
-    <TheHeader></TheHeader>
+  <TheHeader></TheHeader>
+  
+  <div class="vh-100">
 
     <router-view class="h-100"></router-view>
 

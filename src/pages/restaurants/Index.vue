@@ -42,7 +42,7 @@ name: "Restaurants",
                     <p class="card-text">{{ restaurant.description }}</p>
                     <p class="card-text">{{ restaurant.phone_number }}</p>
                     <p class="card-text">{{ restaurant.address }}</p>
-                    <p class="card-text"><small class="text-muted">{{ restaurant.vat }}</small></p>
+                    <a :href="'/restaurants/' + restaurant.id " class="text-decoration-none"><p class="card-text"><small class="text-muted">Dai un'occhiata alla nostra selezione</small></p></a> 
                     <h5 class="card-title">{{ restaurant.type_id }}</h5>
                   </div>
                 </div>

@@ -8,13 +8,20 @@ export default {
 };
 </script>
 <template>
-    <section class="">
-        <div class="container-fluid jumbotron">
-            <div class="row">
-                <div class="d-flex align-items-center justify-content-center">
-                    <h3 class="text-center text-white fw-bolder">Accomodati, ci pensa Deliveboo!</h3>
-                </div>
-            </div>
+    <section class="mt-5">
+        <div class="container-fluid g-0 ">
+            <img src="logo/Home-delivery.png" alt="">
         </div>
     </section>
 </template>
+
+
+<style lang="scss" scoped>
+
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+
+}
+</style>

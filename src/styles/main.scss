@@ -1,6 +1,6 @@
 @use "bootstrap/scss/bootstrap";
 @use "@fortawesome/fontawesome-free/css/all.min.css";
-
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;200;300;400;500;600;700;800&display=swap');
 :root{
     --india-green: #318411ff;
     --golden-gate-bridge: #ef5117ff;
@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Anek Bangla', sans-serif;
 }
 
 .logo {
@@ -19,21 +20,6 @@
     height: 60px;
 }
 
-.jumbotron {
-    background-image: url(/public/logo/ristorante-jumbotron.jpg) ;
-    height:100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.jumbo-image {
-    object-fit: contain;
-    max-height: 100%;
-    max-width: 100%;
-}
 
 .footer {
     background-color: rgb(56, 55, 55);
@@ -41,16 +27,6 @@
     margin-top: 2rem;
 }
 
-.jumbotron-2 {
-    background-image: url(/public/logo/ristorante-jumbotron.jpg);
-    padding-top: 50px;
-    padding-right: 300px;
-    background-repeat: no-repeat;
-    background-position: center top;
-    width: 100%;
-    color: white;
-    background-size: cover;
-}
 
 .zoom {
     transition: transform .2s;

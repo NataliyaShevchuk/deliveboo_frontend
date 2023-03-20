@@ -3,10 +3,11 @@
 import axios from "axios";
 import Categories from "../components/Categories.vue";
 import TheMain from "../components/TheMain.vue";
+import TheJumbo from "../components/TheJumbo.vue";
 
 
 export default{
-    components: { Categories, TheMain },
+    components: { Categories, TheMain, TheJumbo},
     name: "AppHome", 
     data(){
         return{
@@ -18,8 +19,9 @@ export default{
 
 
 <template>
-    
-    <TheMain></TheMain>
+
+    <TheJumbo></TheJumbo>
     <Categories></Categories>
+    <TheMain></TheMain>
 
 </template>

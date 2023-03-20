@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container my-5">
         <div class="text-center p-5">
             <h3>Scegli quello che ti piace di più...</h3>
         </div>
