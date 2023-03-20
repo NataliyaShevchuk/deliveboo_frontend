@@ -26,7 +26,7 @@ routes:
         },
         {
             path: '/restaurants/:id',
-            name: 'restaurants.show',
+            name: 'RestaurantShow',
             component: Show
         },
         {

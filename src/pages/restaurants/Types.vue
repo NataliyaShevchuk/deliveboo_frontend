@@ -154,7 +154,7 @@ export default {
               <div class="card-title" v-for="type_id in restaurant.types" :key="type_id.id">{{ type_id.name }}</div>
               <h6 class="mt-5">Indirizzo:</h6>
               <p class="card-text">{{ restaurant.address }}</p>
-              <a :href="'/dishes/' + restaurant.id" class="btn btn-light mt-4">Menù</a>
+              <a :href="'/api/dishes/'" class="btn btn-light mt-4">Menù</a>
             </div>
           </div>
         </div>
