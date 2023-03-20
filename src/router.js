@@ -24,11 +24,11 @@ routes:
         name: 'Restaurants',
         component: Index
         },
-        {
-            path: '/restaurants/:id',
-            name: 'RestaurantShow',
-            component: Show
-        },
+        // {
+        //     path: '/restaurants/:id',
+        //     name: 'RestaurantShow',
+        //     component: Show
+        // },
         {
             path: '/types',
             name: 'Types',
@@ -40,8 +40,8 @@ routes:
         //     component: Dishes
         // },
         {
-            path: '/dishes',
-            name: 'dishes',
+            path: '/restaurants/:id',
+            name: 'Dish',
             component: Dish
         },
         {
