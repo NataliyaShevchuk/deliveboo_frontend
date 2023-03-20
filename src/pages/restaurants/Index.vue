@@ -27,23 +27,7 @@ name: "Restaurants",
 </script>
 
 <template>
-  <div class="container mt-4">
-    <div class="row">
-      <div class="col-md-3 m-auto mt-4">
-        <div class="list-group">
-          <h4>Di che cosa hai voglia oggi?</h4>
-          <div class="list-group-item">
-            <label>
-              <input type="checkbox" class="form-check-input">
-              Pizzeria
-            </label>
-          </div>
-          <button type="button" class="btn btn-ligth mt-4">Cerca</button>
-        </div>
-      </div>
-    </div>
-
-
+  <h1 class="text-center m-3 text-color ">Fatti ispirare dai nostri numerosi ristoranti</h1>
     <div class="col-md-12">
       <div class="row justify-content-center m-4 g-3">
         <div class="col-sm-4 col-md-4 col-lg-4" v-for="restaurant in restaurants" :key="restaurants.id">
@@ -68,11 +52,13 @@ name: "Restaurants",
       </div>
     </div>
 
-  </div>
+
 </template>
 
 <style>
- 
+.text-color{
+  color: #ef5117ff
+}
 
 .cardine {
   height: 250px;

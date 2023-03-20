@@ -1,6 +1,12 @@
 @use "bootstrap/scss/bootstrap";
 @use "@fortawesome/fontawesome-free/css/all.min.css";
 
+:root{
+    --india-green: #318411ff;
+    --golden-gate-bridge: #ef5117ff;
+    --sunglow: #f9ca30ff;
+}
+
 *{
     margin: 0;
     padding: 0;

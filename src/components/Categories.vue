@@ -27,7 +27,7 @@ export default {
                 <div class="card pizzeria zoom">
                     <div class="card-title">
                         <h5 class="text-center">
-                            <a href="">{{ categories[0].tipo }}</a>
+                            <a href="types">{{ categories[0].tipo }}</a>
                         </h5>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ export default {
                 <div class="card cinese zoom">
                     <div class="card-title">
                         <h5 class="text-center">
-                            <a href="">{{ categories[1].tipo }}</a>
+                            <a href="types">{{ categories[1].tipo }}</a>
                         </h5>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ export default {
                 <div class="card giapponese zoom">
                     <div class="card-title ">
                         <h5 class="text-center">
-                            <a href="">{{ categories[2].tipo }}</a>
+                            <a href="types">{{ categories[2].tipo }}</a>
                         </h5>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ export default {
                 <div class="card kebab zoom">
                     <div class="card-title">
                         <h5 class=" text-center">
-                            <a href="">{{ categories[3].tipo }}</a>
+                            <a href="types">{{ categories[3].tipo }}</a>
                         </h5>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ export default {
                 <div class="card bisteccheria zoom">
                     <div class="card-title ">
                         <h5 class="text-center">
-                            <a href="">{{ categories[4].tipo }}</a>
+                            <a href="types">{{ categories[4].tipo }}</a>
                         </h5>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ export default {
                 <div class="card americano zoom">
                     <div class="card-title">
                         <h5 class="text-center">
-                            <a href="">{{ categories[5].tipo }}</a>
+                            <a href="types">{{ categories[5].tipo }}</a>
                         </h5>
                     </div>
                 </div>

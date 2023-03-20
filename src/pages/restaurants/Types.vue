@@ -118,10 +118,10 @@ export default {
 
 
 <template>
-  <div class="container m-5">
+  <div class="container mt-5">
     <div class="bg-img mb-3">
       <h3 class="text-center p-5">Scegli quello che ti piace di più...</h3>
-    
+
       <div class="">
         <div class="container bg-container">
           <div class="gap-3 d-flex flex-row flex-wrap justify-content-evenly">
@@ -146,15 +146,15 @@ export default {
       <div class="row g-4">
         <div class="col-5 m-3" v-for="restaurant in filteredRestaurants" :key="restaurant.id">
           <div class="card h-100" style="">
-            <img v-if="restaurant.cover_img" class="card-img-top"
+            <img v-if="restaurant.cover_img" class="card-img-top reduced"
               :src="this.backendUrl+ '/storage/' + restaurant.cover_img" alt=""/>
             <div class="card-body">
               <h5 class="card-title">{{ restaurant.name }}</h5>
-              <h6 class="mt-5">Categorie:</h6>
-              <div class="card-title" v-for="type_id in restaurant.types" :key="type_id.id">{{ type_id.name }}</div>
-              <h6 class="mt-5">Indirizzo:</h6>
+              <h6 class="mt-3">Categorie:</h6>
+              <span class="card-title" v-for="type_id in restaurant.types" :key="type_id.id"> {{ type_id.name + " "}}  </span>
+              <h6 class="mt-3">Indirizzo:</h6>
               <p class="card-text">{{ restaurant.address }}</p>
-              <a :href="'/api/dishes/'" class="btn btn-light mt-4">Menù</a>
+              <a :href="'/restaurants/' + restaurant.id ">Menu</a>
             </div>
           </div>
         </div>
@@ -165,6 +165,10 @@ export default {
 
 <style lang="scss" scoped>
 
+.reduced {
+  // max-width: 30vw;
+  max-height: 20vw;
+}
 .bg-light-orange{
   background-color: #FC7536;
   color:white;
@@ -173,7 +177,7 @@ export default {
 }
 
 .bg-img{
-  background-image: url('public/cibo/cow-burger.jpg');
+  background-image: url('/cibo/cow-burger.jpg');
   background-position: bottom;
   background-size: cover;
   aspect-ratio: 3/1;
