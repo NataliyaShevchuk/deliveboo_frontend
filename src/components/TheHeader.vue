@@ -90,7 +90,7 @@ export default {
                   </nav> -->
 
 
-  <nav class="navbar navbar-expand-lg  bg-body-tertiary d_flex introduction sticky-top px-2 "
+  <nav class="navbar navbar-expand-lg  bg-body-tertiary d_flex introduction sticky-top px-2 col-sm-12"
     style="background-color: #ef5117ff;">
     <div class="container-fluid">
       <router-link to="/home" class="navbar-brand d-flex align-items-center me-3"><img src="/logo/4.png" alt=""

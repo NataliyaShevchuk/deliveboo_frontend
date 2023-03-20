@@ -22,7 +22,7 @@ export default {
         <div class="text-center p-5">
             <h3>Scegli quello che ti piace di più...</h3>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 g-4 ">
+        <div class="row row-cols-1 row-cols-md-2 col-sm-12 g-4 ">
             <div class="col">
                 <div class="card pizzeria zoom">
                     <div class="card-title">
