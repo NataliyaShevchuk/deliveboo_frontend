@@ -12,10 +12,10 @@ export default {
           label: "Ristoranti",
           routeName: "Restaurants",
         },
-        {
-          label: "Piatti",
-          routeName: "Dishes",
-        },
+        // {
+        //   label: "Piatti",
+        //   routeName: "Dishes",
+        // },
         {
           label: "Contatti",
           routeName: "ContactUs",

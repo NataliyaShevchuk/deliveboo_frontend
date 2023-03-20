@@ -119,23 +119,25 @@ export default {
 
 <template>
   <div class="container m-5">
-    <div class="text-center p-5">
-      <h3>Scegli quello che ti piace di più...</h3>
-    </div>
-    <div class="">
-      <div class="container bg-container">
-        <div class="gap-4">
-          <div class="list-group-item" v-for="type in types">
-          
-            <label class="d-flex">
-              <input :class="{ '' : this.filterType.includes(type.id) }" :key="type.id"
-              class="form-check-input" type="checkbox" @click="filterTypePush(type.id)">
-              <h5 class="mx-2">{{ type.name }}</h5>
-            </label>
+    <div class="bg-img mb-3">
+      <h3 class="text-center p-5">Scegli quello che ti piace di più...</h3>
+    
+      <div class="">
+        <div class="container bg-container">
+          <div class="gap-3 d-flex flex-row flex-wrap justify-content-evenly">
+            <div class="" v-for="type in types">
 
+            <button class="btn bg-light-orange">
+              <label class="d-flex">
+                <input :class="{ '' : this.filterType.includes(type.id) }" :key="type.id"
+                class="form-check-input " type="checkbox" @click="filterTypePush(type.id)">
+                <h5 class="px-1 mb-0">{{ type.name }}</h5>
+              </label>
+            </button>
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
 
@@ -160,4 +162,24 @@ export default {
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+
+.bg-light-orange{
+  background-color: #FC7536;
+  color:white;
+  border-radius: 8px;
+  padding: 0,5rem;
+}
+
+.bg-img{
+  background-image: url('public/cibo/cow-burger.jpg');
+  background-position: bottom;
+  background-size: cover;
+  aspect-ratio: 3/1;
+  color: white;
+  position: relative;
+}
+
+</style>
 
