@@ -29,19 +29,49 @@ export default {
 
 
 <template>
+  <button class="btn btn-success opacity-75 m-3">
+    <a :href="'/types'" class="text-decoration-none text-white">
+      Indietro
+    </a>
+  </button>
   <div class="container">
-  <h2 class="mt-3">Piatti del Ristorante {{ restaurant.name }}</h2>
+    <!-- <div class="row ">
+      <div class="col-6">
+        <img :src="this.backendUrl + '/storage/' + restaurant.cover_img" class="img-fluid rounded">
+      </div>
 
-      <h4 class="margin-auto ">Indirizzo: {{ restaurant.address }}</h4>
-      <h3 class="margin-auto">Chiamaci per ordinare: {{ restaurant.phone_number }}</h3>
+      <div class="col-6">
+        <h2 class="mt-3 orange">Piatti del Ristorante {{ restaurant.name }}</h2>
+        <h4 class="mb-3">Indirizzo: {{ restaurant.address }}</h4>
+        <h4 class="mb-3">Chiamaci per ordinare:
+          <span class="orange fs-3">{{ restaurant.phone_number }}</span>
+        </h4>
+      </div>
+    </div> -->
+  <div class="d-flex justify-content-center">
+
+    <div class="card border-orange box-img">
+      <img :src="this.backendUrl + '/storage/' + restaurant.cover_img" class="card-img opacity-75" alt="...">
+      <div class="card-img-overlay ">
+        <h3 class="mt-3 orange">{{ restaurant.name }}</h3>
+        <h4 class="mb-3 text-white">Indirizzo:
+          <span class="orange fs-3">{{ restaurant.address }}</span>
+        </h4>
+        <h4 class="mb-3 text-white">Chiamaci per ordinare:
+          <span class="orange fs-3">{{ restaurant.phone_number }}</span>
+        </h4>
+      </div>
+    </div>
+  </div>
 
     <div class="row justify-content-center g-5 my-3">
       <div class="col-sm col-md-6 col-lg-4 col-xl-4" v-for="dish in dishes" :key="dish.id">
         <div class="card" v-if="dish.show">
           <div class="container-img" v-if="dish.cover_img">
-            <img :src="this.backendUrl + '/storage/' + dish.cover_img" class="cardine img-fluid rounded card-img-top image" alt="...">
+            <img :src="this.backendUrl + '/storage/' + dish.cover_img"
+              class="cardine img-fluid rounded card-img-top image" alt="...">
             <div class="card-text overlay">
-              <strong class="text">Prezzo: {{ dish.price + "&#8364;" }}</strong> 
+              <strong class="text">Prezzo: {{ dish.price + "&#8364;" }}</strong>
             </div>
           </div>
           <div class="card-body">
@@ -62,7 +92,15 @@ export default {
   position: relative;
 
 }
+.box-img {
+  width: 700px;
+  height: 500px;
+}
 
+img {
+  display: block;
+  width: 100%;
+}
 
 
 .overlay {
@@ -93,6 +131,4 @@ export default {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-</style>
+}</style>

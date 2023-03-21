@@ -5,8 +5,8 @@ import AppHome from './pages/AppHome.vue';
 import Index from './pages/restaurants/Index.vue';
 import ContactUs from './pages/ContactUs.vue';
 import Types from './pages/restaurants/Types.vue';
-// import Cart from './pages/Cart.vue';
 import Dish from './pages/restaurants/Dish.vue';
+// import Cart from './pages/Cart.vue';
 
 const router = createRouter({
 history: createWebHistory(),
@@ -33,7 +33,7 @@ routes:
             component: Dish
         },
         {
-            path: '/',
+            path: '/contacts',
             name: 'ContactUs',
             component: ContactUs
         },

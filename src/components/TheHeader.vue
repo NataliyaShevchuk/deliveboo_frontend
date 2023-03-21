@@ -13,12 +13,8 @@ export default {
           label: "Ristoranti",
           routeName: "Restaurants",
         },
-        // {
-        //   label: "Piatti",
-        //   routeName: "Dishes",
-        // },
         {
-          label: "Contatti",
+          label: "Contattaci",
           routeName: "ContactUs",
         },
 
@@ -95,8 +91,8 @@ export default {
   <nav class="navbar navbar-expand-lg  bg-body-tertiary d_flex introduction sticky-top px-2 col-sm-12"
     style="background-color: #ef5117ff;">
     <div class="container-fluid">
-      <router-link to="/home" class="navbar-brand d-flex align-items-center me-3"><img src="/logo/4.png" alt=""
-          class="logo"></router-link>
+      <a :href="'/'" class="navbar-brand d-flex align-items-center me-3"><img src="/logo/4.png" alt=""
+          class="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -126,7 +122,7 @@ export default {
           <div>
             
               <a class="nav-item text-white animation" href="http://localhost:8000/register" role="button">Registrati</a>
-           
+          
           </div>
         </div>
       </div>

@@ -6,29 +6,30 @@ export default {
     data() {
         return {
             backendUrl: 'http://localhost:8000',
+            loading: false,
             submitResult: "",
             form: {
                 name: "",
-                phone_number: "",
-                cover_img: "",
-                vat: "",
-                address: "",
+                email: "",
+                message: "",
             }
         };
     },
     methods: {
         onFormSubmit() {
+            this.loading = true;
+
             const formData = new FormData();
             formData.append('name', this.form.name);
-            formData.append('phone_number', this.form.phone_number);
-            formData.append('cover_img', this.form.cover_img);
-            formData.append('vat', this.form.vat);
-            formData.append('address', this.form.address);
+            formData.append('email', this.form.email);
+            formData.append('message', this.form.message);
+
 
             axios
-            .post(this.backendUrl + '/api/restaurants', formData)
+                .post(this.backendUrl + '/api/contacts', formData)
                 .then((resp) => {
                     this.submitResult = "success";
+                    this.loading = false;
                 })
                 .catch((e) => {
                     if (e.response && e.response.data) {
@@ -37,12 +38,9 @@ export default {
                         this.submitResult = e.message;
                     }
                     console.log(e);
-                });
-        },
-        onCoverImgchange(event) {
-            const chosenFiles = event.target.files
 
-            this.form.cover_img = chosenFiles[0];
+                    this.loading = false;
+                });
         }
     }
 }
@@ -50,19 +48,24 @@ export default {
 
 
 <template>
-    <div class="container justify-content-center">
-        
+    <button class="btn btn-success opacity-75 m-3">
+        <a :href="'/'" class="text-decoration-none text-white">
+            Indietro
+        </a>
+    </button>
+    <div class="container justify-content-center mt-5">
+
         <div class="alert alert-success" role="alert" v-if="submitResult === 'success'">
-            Fantastico, i tuoi dati sono tutti corretti!
+            Fantastico, ti ringrazio per averci contattato!
         </div>
         <div class="alert alert-warning" role="alert" v-else-if="submitResult">
-            Mi dispiace, le informazioni inserite non sono corrette: {{ submitResult }}
+            Mi dispiace, ma c'è un problema: {{ submitResult }}
         </div>
 
-    
+
         <form class="text-success" @submit.prevent="onFormSubmit" v-if="submitResult !== 'success'">
             <div class="mb-3">
-                <label for="nameInput" class="form-label">Nome *</label>
+                <label for="nameInput" class="form-label">Nome </label>
                 <input type="text"
                     class="form-control"
                     name="name"
@@ -70,53 +73,46 @@ export default {
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Numero di telefono *</label>
-                <input type="number"
+                <label class="form-label">Email *</label>
+                <input type="email"
                     class="form-control"
-                    name="phone_number"
-                    v-model="form.phone_number">
-            </div>
-
-            <div class="mb-3">
-                <label for="" class="form-label">Cover Image *</label>
-                <input type="file"
-                    class="form-control"
-                    name="cover_img"
-                    @change="onCoverImgchange">
+                    name="email"
+                    v-model="form.email">
             </div>
 
 
             <div class="mb-3">
-                <label class="form-label">P.IVA *</label>
-                <input type="number"
+                <label class="form-label">Messaggio </label>
+                <textarea type="text"
                     class="form-control"
-                    name="vat"
-                    v-model="form.vat">
+                    name="description"
+                    v-model="form.message">
+                        </textarea>
             </div>
 
-            <div class="mb-3">
-                <label class="form-label">Indirizzo *</label>
-                <input type="text"
-                    class="form-control"
-                    name="address"
-                    v-model="form.address">
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-success" :disabled="loading">
+                    <span
+                        v-if="loading"
+                        class="spinner-border spinner-border-sm"
+                        role="status"
+                        aria-hidden="true"></span>
+                    Invia
+                </button>
+                <button class="btn btn-warning text-white" typeof="reset" :disabled="loading">
+                    Annulla
+                </button>
             </div>
-
-            <div class="mb-3">
-                <div class="mb-1">Tipologie di cucina</div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="CheckType" name="">
-                    <label class="form-check-label" for="CheckType"></label>
-                </div>
-
-            </div>
-
-            <button class="btn btn-success text-white" type="submit">Save</button>
-            <button class="btn btn-warning m-3" type="reset">
-                <a href="" class="text-decoration-none text-white">
-                    Back
-                </a>
-            </button>
         </form>
     </div>
 </template>
+
+<style lang="scss" scoped>
+form {
+    padding: 2rem;
+    border: 1px solid #ef5117ff;
+    border-bottom: 1px solid #318411ff;
+    border-left: 1px solid #f9ca30ff;
+    border-radius: 5px;
+}
+</style>

@@ -24,7 +24,7 @@ components: { TheHeader , TheMain , TheFooter },
   
   <div class="vh-100">
 
-    <router-view class="h-100"></router-view>
+    <router-view></router-view>
 
     <TheFooter></TheFooter>
     
